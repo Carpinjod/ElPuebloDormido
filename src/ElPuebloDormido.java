@@ -11,7 +11,7 @@ public class ElPuebloDormido {
     // Generador de números aleatorios
     private static final Random ALEATORIO = new Random();
 
-    // Método principal: inicia el juego y controla el ciclo principal
+    // Metodo principal: inicia el juego y controla el ciclo principal
     public static void main(String[] args) {
         System.out.println("=== BIENVENIDO A EL PUEBLO DORMIDO ===");
         generarPoblacionAleatoria();
@@ -45,11 +45,9 @@ public class ElPuebloDormido {
             // Simula el paso de un año en el pueblo
             pasarAnyo();
         } else if (opcion == 3) {
-            // Sale del programa
             System.out.println("Saliendo del programa...");
             continuar = false;
         } else {
-            // Opción no válida
             System.out.println("Opción no válida.");
         }
         return continuar;
@@ -80,7 +78,7 @@ public class ElPuebloDormido {
         }
     }
 
-    // Simula el paso de un año: cada ciudadano interactúa con otro y envejece si corresponde
+    // Simula el paso de un año: cada ciudadano interactúa con otro y envejece si es el caso
     public static void pasarAnyo() throws Exception {
         if (ciudadanos.isEmpty()) {
             throw new IllegalArgumentException("No hay ciudadanos disponibles.");
@@ -119,7 +117,6 @@ public class ElPuebloDormido {
             throw new IllegalArgumentException("Los oponentes no pudn ser null.");
         }
 
-        // Si son del mismo tipo, intentan reproducirse (excepto vampiros)
         if (ciudadano1.getClass() == ciudadano2.getClass()) {
             if (ciudadano1 instanceof Humano) {
                 ((Humano) ciudadano1).reproducir(ciudadanos);

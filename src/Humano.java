@@ -27,7 +27,7 @@ public final class Humano extends Ciudadano implements Batalla, CicloVital {
         totalHumanos = numero;
     }
 
-    // Lógica de combate: si el oponente es el vulnerable, pierde; si es vampiro, se convierte; si no, gana
+    // Lógica de combate: si el oponente es el vulnerable, pierde y si es vampiro, se convierte, si no, gana
     @Override
     public Ciudadano combate(Ciudadano oponente) {
         System.out.println(nombre + " (HUMANO) combate contra " + oponente.getNombre());
